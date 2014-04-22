@@ -3,10 +3,12 @@ using System.Collections;
 
 public class Transparent : MonoBehaviour {
 
-
+	GameObject glass;
+	GameObject Arrow;
 	// Use this for initialization
 	void Start () {
-		GameObject glass = GameObject.Find("Glass");
+		glass = GameObject.Find("Glass");
+		Arrow = GameObject.Find("Arrow");
 		Color color = renderer.material.color;
 		color.a = 0.5f;
 		glass.renderer.material.color = color;
